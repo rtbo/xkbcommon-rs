@@ -175,16 +175,16 @@ pub const KEYCODE_MAX    :u32 = 0xfffffffe;
 
 pub type KeysymFlags = u32;
 pub const KEYSYM_NO_FLAGS: u32 = 0;
-pub const KEYSYM_CASE_INSENSITIVE: u32 = (1 << 0);
+pub const KEYSYM_CASE_INSENSITIVE: u32 = 1 << 0;
 
 /// Flags for context creation.
 pub type ContextFlags = u32;
 /// Do not apply any context flags.
 pub const CONTEXT_NO_FLAGS: u32 = 0;
 /// Create this context with an empty include path.
-pub const CONTEXT_NO_DEFAULT_INCLUDES: u32 = (1 << 0);
+pub const CONTEXT_NO_DEFAULT_INCLUDES: u32 = 1 << 0;
 /// Don't take RMLVO names from the environment.
-pub const CONTEXT_NO_ENVIRONMENT_NAMES: u32 = (1 << 1);
+pub const CONTEXT_NO_ENVIRONMENT_NAMES: u32 = 1 << 1;
 
 
 #[repr(C)]
@@ -229,31 +229,31 @@ pub enum KeyDirection {
 /// In XKB, the DEPRESSED components are also known as 'base'.
 pub type StateComponent = u32;
 /// Depressed modifiers, i.e. a key is physically holding them.
-pub const STATE_MODS_DEPRESSED: u32 = (1 << 0);
+pub const STATE_MODS_DEPRESSED: u32 = 1 << 0;
 /// Latched modifiers, i.e. will be unset after the next non-modifier
 ///  key press.
-pub const STATE_MODS_LATCHED: u32 = (1 << 1);
+pub const STATE_MODS_LATCHED: u32 = 1 << 1;
 /// Locked modifiers, i.e. will be unset after the key provoking the
 ///  lock has been pressed again.
-pub const STATE_MODS_LOCKED: u32 = (1 << 2);
+pub const STATE_MODS_LOCKED: u32 = 1 << 2;
 /// Effective modifiers, i.e. currently active and affect key
 ///  processing (derived from the other state components).
 ///  Use this unless you explictly care how the state came about.
-pub const STATE_MODS_EFFECTIVE: u32 = (1 << 3);
+pub const STATE_MODS_EFFECTIVE: u32 = 1 << 3;
 /// Depressed layout, i.e. a key is physically holding it.
-pub const STATE_LAYOUT_DEPRESSED: u32 = (1 << 4);
+pub const STATE_LAYOUT_DEPRESSED: u32 = 1 << 4;
 /// Latched layout, i.e. will be unset after the next non-modifier
 ///  key press.
-pub const STATE_LAYOUT_LATCHED: u32 = (1 << 5);
+pub const STATE_LAYOUT_LATCHED: u32 = 1 << 5;
 /// Locked layout, i.e. will be unset after the key provoking the lock
 ///  has been pressed again.
-pub const STATE_LAYOUT_LOCKED: u32 = (1 << 6);
+pub const STATE_LAYOUT_LOCKED: u32 = 1 << 6;
 /// Effective layout, i.e. currently active and affects key processing
 ///  (derived from the other state components).
 ///  Use this unless you explictly care how the state came about.
-pub const STATE_LAYOUT_EFFECTIVE: u32 = (1 << 7);
+pub const STATE_LAYOUT_EFFECTIVE: u32 = 1 << 7;
 /// LEDs (derived from the other state components).
-pub const STATE_LEDS: u32 = (1 << 8);
+pub const STATE_LEDS: u32 = 1 << 8;
 
 
 
@@ -263,12 +263,12 @@ pub const STATE_LEDS: u32 = (1 << 8);
 /// the other modes.
 pub type StateMatch = u32;
 ///Returns true if any of the modifiers are active.
-pub const STATE_MATCH_ANY: u32 = (1 << 0);
+pub const STATE_MATCH_ANY: u32 = 1 << 0;
 ///Returns true if all of the modifiers are active.
-pub const STATE_MATCH_ALL: u32 = (1 << 1);
+pub const STATE_MATCH_ALL: u32 = 1 << 1;
 /// Makes matching non-exclusive, i.e. will not return false if a
 ///  modifier not specified in the arguments is active.
-pub const STATE_MATCH_NON_EXCLUSIVE: u32 = (1 << 16);
+pub const STATE_MATCH_NON_EXCLUSIVE: u32 = 1 << 16;
 
 pub const MOD_NAME_SHIFT: &'static str = "Shift";
 pub const MOD_NAME_CAPS: &'static str = "Lock";

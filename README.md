@@ -5,12 +5,12 @@ xkbcommon-rs is a set of bindings and safe wrappers for [libxkbcommon](http://xk
 For use with wayland:
 ```toml
 [dependencies]
-xkbcommon = { version = "0.4", features = ["wayland"] }
+xkbcommon = { version = "0.5", features = ["wayland"] }
 ```
 For use with X11:
 ```toml
 [dependencies]
-xkbcommon = { version = "0.4", features = ["x11"] }
+xkbcommon = { version = "0.5", features = ["x11"] }
 ```
 
 # documentation

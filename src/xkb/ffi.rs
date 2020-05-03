@@ -60,12 +60,12 @@ pub struct xkb_rule_names {
 
 pub type xkb_keysym_flags = u32;
 pub const XKB_KEYSYM_NO_FLAGS: u32 = 0;
-pub const XKB_KEYSYM_CASE_INSENSITIVE: u32 = (1 << 0);
+pub const XKB_KEYSYM_CASE_INSENSITIVE: u32 = 1 << 0;
 
 pub type xkb_context_flags = u32;
 pub const XKB_CONTEXT_NO_FLAGS: u32 = 0;
-pub const XKB_CONTEXT_NO_DEFAULT_INCLUDES: u32 = (1 << 0);
-pub const XKB_CONTEXT_NO_ENVIRONMENT_NAMES: u32 = (1 << 1);
+pub const XKB_CONTEXT_NO_DEFAULT_INCLUDES: u32 = 1 << 0;
+pub const XKB_CONTEXT_NO_ENVIRONMENT_NAMES: u32 = 1 << 1;
 
 
 #[repr(C)]
@@ -94,21 +94,21 @@ pub enum xkb_key_direction {
 
 
 pub type xkb_state_component = u32;
-pub const XKB_STATE_MODS_DEPRESSED: u32 = (1 << 0);
-pub const XKB_STATE_MODS_LATCHED: u32 = (1 << 1);
-pub const XKB_STATE_MODS_LOCKED: u32 = (1 << 2);
-pub const XKB_STATE_MODS_EFFECTIVE: u32 = (1 << 3);
-pub const XKB_STATE_LAYOUT_DEPRESSED: u32 = (1 << 4);
-pub const XKB_STATE_LAYOUT_LATCHED: u32 = (1 << 5);
-pub const XKB_STATE_LAYOUT_LOCKED: u32 = (1 << 6);
-pub const XKB_STATE_LAYOUT_EFFECTIVE: u32 = (1 << 7);
-pub const XKB_STATE_LEDS: u32 = (1 << 8);
+pub const XKB_STATE_MODS_DEPRESSED: u32 = 1 << 0;
+pub const XKB_STATE_MODS_LATCHED: u32 = 1 << 1;
+pub const XKB_STATE_MODS_LOCKED: u32 = 1 << 2;
+pub const XKB_STATE_MODS_EFFECTIVE: u32 = 1 << 3;
+pub const XKB_STATE_LAYOUT_DEPRESSED: u32 = 1 << 4;
+pub const XKB_STATE_LAYOUT_LATCHED: u32 = 1 << 5;
+pub const XKB_STATE_LAYOUT_LOCKED: u32 = 1 << 6;
+pub const XKB_STATE_LAYOUT_EFFECTIVE: u32 = 1 << 7;
+pub const XKB_STATE_LEDS: u32 = 1 << 8;
 
 
 pub type xkb_state_match = u32;
-pub const XKB_STATE_MATCH_ANY: u32 = (1 << 0);
-pub const XKB_STATE_MATCH_ALL: u32 = (1 << 1);
-pub const XKB_STATE_MATCH_NON_EXCLUSIVE: u32 = (1 << 16);
+pub const XKB_STATE_MATCH_ANY: u32 = 1 << 0;
+pub const XKB_STATE_MATCH_ALL: u32 = 1 << 1;
+pub const XKB_STATE_MATCH_NON_EXCLUSIVE: u32 = 1 << 16;
 
 
 
